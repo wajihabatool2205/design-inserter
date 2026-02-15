@@ -1,5 +1,4 @@
 import { useState, useMemo } from "react";
-import { Link } from "react-router-dom";
 import { Image } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import ScrollToTopFab from "@/components/ScrollToTopFab";
@@ -9,19 +8,18 @@ interface ProjectCard {
   year: string;
   title: string;
   tags: string[];
-  slug: string;
 }
 
 const projects: ProjectCard[] = [
-  { index: "001", year: "2023", title: "Apex Finance", tags: ["Systems", "Frontend"], slug: "apex-finance" },
-  { index: "002", year: "2023", title: "Oculus Archive", tags: ["Creative Direction", "Frontend"], slug: "oculus-archive" },
-  { index: "003", year: "2022", title: "Carbon/Zero", tags: ["Strategy", "Systems"], slug: "carbon-zero" },
-  { index: "004", year: "2022", title: "Vector Space", tags: ["R&D", "Creative Direction"], slug: "vector-space" },
-  { index: "005", year: "2021", title: "Kinetic UI", tags: ["Frontend", "Systems"], slug: "kinetic-ui" },
-  { index: "006", year: "2021", title: "Nebula OS", tags: ["R&D", "Systems"], slug: "nebula-os" },
+  { index: "001", year: "2025", title: "AI-Powered SaaS MVPs", tags: ["Lovable.dev", "Supabase", "Frontend"] },
+  { index: "002", year: "2025", title: "Figma to React / Next.js", tags: ["Figma to Code", "Frontend"] },
+  { index: "003", year: "2025", title: "Vibe Code Bug Fixing", tags: ["Lovable.dev", "Bolt.new", "Frontend"] },
+  { index: "004", year: "2024", title: "E-commerce Frontends", tags: ["React", "Tailwind CSS"] },
+  { index: "005", year: "2024", title: "SaaS Dashboards", tags: ["Frontend", "Supabase"] },
+  { index: "006", year: "2023", title: "Landing Pages & Portfolios", tags: ["Figma to Code", "Tailwind CSS"] },
 ];
 
-const allFilters = ["All", "Creative Direction", "Systems", "Strategy", "Frontend", "R&D"];
+const allFilters = ["All", "Lovable.dev", "Frontend", "Figma to Code", "Supabase", "Tailwind CSS"];
 
 const Archive = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -43,16 +41,16 @@ const Archive = () => {
 
       <header className="mb-8">
         <h1 className="text-4xl md:text-6xl lg:text-[5rem] font-medium tracking-[-0.04em] leading-[0.9] mb-4">
-          Index<br />© 2024
+          Project Archive<br />© 2026
         </h1>
         <p className="text-xl max-w-[60ch]">
-          A comprehensive archive of design systems, technical explorations, and product launches.
+          A comprehensive archive of frontend development, AI-powered MVPs, and Figma-to-code projects.
         </p>
       </header>
 
       {/* Controls */}
       <div className="border-t-2 border-foreground py-8 flex flex-wrap justify-between items-center gap-8 mb-8">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 flex-wrap">
           <span className="font-semibold text-sm uppercase tracking-wider">Filter By</span>
           <div className="flex flex-wrap gap-2">
             {allFilters.map((f) => (
@@ -87,10 +85,9 @@ const Archive = () => {
       {/* Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[2px] bg-foreground border-2 border-foreground">
         {filtered.map((project) => (
-          <Link
+          <div
             key={project.index}
-            to={`/project/${project.slug}`}
-            className="bg-background aspect-[4/5] p-8 flex flex-col justify-between relative overflow-hidden transition-colors duration-300 hover:bg-muted no-underline text-foreground group"
+            className="bg-background aspect-[4/5] p-8 flex flex-col justify-between relative overflow-hidden transition-colors duration-300 hover:bg-muted group"
           >
             <div className="flex justify-between items-start z-[2]">
               <span className="text-2xl font-normal">{project.index}</span>
@@ -112,7 +109,7 @@ const Archive = () => {
                 ))}
               </div>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
 
