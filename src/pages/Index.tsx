@@ -12,7 +12,7 @@ const Index = () => {
       <header className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-16 lg:mb-24 items-start">
         <div>
           <h1 className="text-4xl md:text-6xl lg:text-[5rem] font-medium tracking-[-0.04em] leading-[0.9] mb-4">
-            Wajiha Batool<br />© 2024
+            Wajiha Batool<br />© 2026
           </h1>
           <div className="flex flex-wrap gap-2 mt-4">
             <Pill variant="green" href="https://www.upwork.com/freelancers/~0114a742487a1b4aea">Available for work</Pill>
@@ -24,14 +24,16 @@ const Index = () => {
 
         <div>
           <div className="flex flex-wrap gap-2 mb-8">
-            <Pill>React</Pill>
-            <Pill>Next.js</Pill>
+            <Pill>React & Next.js</Pill>
             <Pill>Tailwind CSS</Pill>
             <Pill>Figma to Code</Pill>
             <Pill>Vibe Coding</Pill>
+            <Pill>Lovable.dev</Pill>
+            <Pill>Supabase</Pill>
+            <Pill>AI-Enhanced Dev</Pill>
           </div>
           <p className="text-xl font-normal leading-relaxed max-w-[60ch]">
-            Wajiha Batool is a Frontend Developer and Vibe Coder with 3+ years of experience specializing in modern, high-performance web interfaces. Building clean, scalable, and responsive front-end applications using React, Next.js, Tailwind CSS, and pixel-perfect Figma-to-code workflows. Leveraging AI-powered tools like Lovable.dev, Bolt.new, and Cursor for rapid, production-level development.
+            Wajiha Batool is a Lovable.dev &amp; AI-Assisted MVP Specialist with 3+ years of experience in frontend web development. I help startups and founders transform ideas into fully functional, scalable web applications in record time using AI-powered development with Lovable.dev, Supabase, and Cursor. My background in React, Next.js, Tailwind CSS, and pixel-perfect Figma-to-code workflows allows me to deliver production-ready MVPs that are clean, performant, and built to scale.
           </p>
         </div>
       </header>

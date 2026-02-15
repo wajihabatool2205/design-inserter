@@ -5,25 +5,33 @@ import Pill from "@/components/Pill";
 
 const skills = [
   "React & Next.js",
+  "Svelte / SvelteKit",
   "Tailwind CSS",
   "Figma to Code",
   "Vibe Coding",
+  "Lovable.dev",
+  "Supabase",
   "AI-Enhanced Dev",
   "Responsive Design",
   "Performance Optimization",
   "Accessibility",
+  "TypeScript",
 ];
 
 const workHistory = [
-  { period: "2024 — Pres.", role: "Freelance Frontend Developer", context: "Upwork / Remote" },
-  { period: "2022 — 2024", role: "Frontend Developer", context: "Web Applications" },
-  { period: "2021 — 2022", role: "Junior Frontend Developer", context: "Agency / Creative" },
+  { period: "Sep 2025 — Pres.", role: "Sr. Frontend Developer | Vibe Coder, Lovable.dev", context: "Freelance (Upwork)" },
+  { period: "Feb 2024 — Apr 2024", role: "Senior Front-End Developer", context: "Vertex Digital Solutions" },
+  { period: "Jan 2023 — Oct 2025", role: "Junior → Sr. Front-End Developer", context: "North Aims Technologies" },
 ];
 
-const highlights = [
-  { type: "Certification", title: "Certified Frontend Developer", detail: "3+ Years Experience" },
-  { type: "Specialty", title: "Figma to Pixel-Perfect Code", detail: "React, Next.js, Tailwind" },
-  { type: "Tools", title: "AI-Enhanced Workflow", detail: "Lovable.dev, Bolt.new, Cursor" },
+const education = [
+  { period: "2024 — 2026", institution: "Karakurum International University", degree: "BSc Information Technology, CS" },
+  { period: "2021 — 2024", institution: "Mountains Land School System | Gilgit", degree: "Bachelor's degree, CS" },
+];
+
+const certifications = [
+  { type: "Certification", title: "Lovable AI: Complete Guide for Vibe Coding", detail: "Udemy · Dec 2025" },
+  { type: "Certification", title: "Meta Front-end Developer", detail: "Coursera · Apr 2023" },
 ];
 
 const availableDays = [1, 3, 5, 8, 10, 12, 15, 17, 19, 22, 24, 26];
@@ -43,7 +51,7 @@ const About = () => {
       {/* Hero */}
       <header className="mb-16">
         <h1 className="text-4xl md:text-6xl lg:text-[5rem] font-medium tracking-[-0.04em] leading-[0.9] mb-8">
-          Bridging the gap between design and high-fidelity code.
+          Turning ideas into production-ready MVPs.
         </h1>
       </header>
 
@@ -51,10 +59,10 @@ const About = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 mb-24">
         <div>
           <p className="text-[1.75rem] leading-[1.3] font-normal tracking-[-0.01em] mb-8">
-            Wajiha Batool is a Frontend Developer and Vibe Coder with over 3 years of experience building clean, scalable, and responsive web applications. Specializing in pixel-perfect Figma-to-code workflows and AI-enhanced development.
+            Wajiha Batool is a Lovable.dev &amp; AI-Assisted MVP Specialist with over 3 years of experience building clean, scalable, and responsive web applications. Based in Gilgit, Pakistan.
           </p>
           <p className="text-[1.75rem] leading-[1.3] font-normal tracking-[-0.01em]">
-            I build modern, high-performance interfaces using React, Next.js, and Tailwind CSS. I leverage AI-powered tools to speed up development while maintaining production-level quality and deliver SEO-friendly, accessible, and cross-browser compatible builds.
+            I help startups and founders transform ideas into fully functional, scalable web applications in record time. Using AI-powered development with Lovable.dev, Supabase, Replit, and Cursor, I rapidly build and launch production-ready MVPs that are clean, performant, and built to scale.
           </p>
         </div>
         <div>
@@ -73,32 +81,64 @@ const About = () => {
         {workHistory.map((item, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[150px_1fr_200px] py-6 items-baseline ${
+            className={`grid grid-cols-1 md:grid-cols-[180px_1fr_220px] py-6 items-baseline ${
               i === workHistory.length - 1 ? "border-b-2 border-foreground" : "border-b border-foreground"
             }`}
           >
             <span className="text-muted-foreground">{item.period}</span>
             <span className="font-semibold text-xl">{item.role}</span>
-            <span className="text-right">{item.context}</span>
+            <span className="md:text-right">{item.context}</span>
           </div>
         ))}
       </section>
 
-      {/* Highlights */}
+      {/* Education */}
       <section className="border-t-2 border-foreground pt-8 mb-24">
-        <h2 className="text-3xl md:text-5xl lg:text-[4rem] font-semibold tracking-[-0.03em] mb-6">Highlights</h2>
-        {highlights.map((item, i) => (
+        <h2 className="text-3xl md:text-5xl lg:text-[4rem] font-semibold tracking-[-0.03em] mb-6">Education</h2>
+        {education.map((item, i) => (
           <div
             key={i}
-            className={`grid grid-cols-[150px_1fr_200px] py-6 items-baseline ${
-              i === highlights.length - 1 ? "border-b-2 border-foreground" : "border-b border-foreground"
+            className={`grid grid-cols-1 md:grid-cols-[180px_1fr_280px] py-6 items-baseline ${
+              i === education.length - 1 ? "border-b-2 border-foreground" : "border-b border-foreground"
+            }`}
+          >
+            <span className="text-muted-foreground">{item.period}</span>
+            <span className="font-semibold text-xl">{item.institution}</span>
+            <span className="md:text-right">{item.degree}</span>
+          </div>
+        ))}
+      </section>
+
+      {/* Certifications */}
+      <section className="border-t-2 border-foreground pt-8 mb-24">
+        <h2 className="text-3xl md:text-5xl lg:text-[4rem] font-semibold tracking-[-0.03em] mb-6">Certifications</h2>
+        {certifications.map((item, i) => (
+          <div
+            key={i}
+            className={`grid grid-cols-1 md:grid-cols-[150px_1fr_200px] py-6 items-baseline ${
+              i === certifications.length - 1 ? "border-b-2 border-foreground" : "border-b border-foreground"
             }`}
           >
             <span className="text-muted-foreground">{item.type}</span>
             <span className="font-semibold text-xl">{item.title}</span>
-            <span className="text-right">{item.detail}</span>
+            <span className="md:text-right">{item.detail}</span>
           </div>
         ))}
+      </section>
+
+      {/* Languages */}
+      <section className="border-t-2 border-foreground pt-8 mb-24">
+        <h2 className="text-3xl md:text-5xl lg:text-[4rem] font-semibold tracking-[-0.03em] mb-6">Languages</h2>
+        <div className="grid grid-cols-1 md:grid-cols-[150px_1fr_200px] py-6 items-baseline border-b border-foreground">
+          <span className="text-muted-foreground">English</span>
+          <span className="font-semibold text-xl">Fluent</span>
+          <span className="md:text-right">Professional</span>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-[150px_1fr_200px] py-6 items-baseline border-b-2 border-foreground">
+          <span className="text-muted-foreground">Urdu</span>
+          <span className="font-semibold text-xl">Native or Bilingual</span>
+          <span className="md:text-right">Native</span>
+        </div>
       </section>
 
       {/* Contact */}
