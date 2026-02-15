@@ -1,33 +1,37 @@
 import Pill from "@/components/Pill";
 import ProjectRow from "@/components/ProjectRow";
 import ScrollToTopFab from "@/components/ScrollToTopFab";
+import SiteHeader from "@/components/SiteHeader";
 
 const Index = () => {
   return (
     <div className="max-w-[1440px] mx-auto px-4 md:px-8 py-8 md:py-16">
+      <SiteHeader />
+
       {/* Header */}
       <header className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-16 lg:mb-24 items-start">
         <div>
           <h1 className="text-4xl md:text-6xl lg:text-[5rem] font-medium tracking-[-0.04em] leading-[0.9] mb-4">
-            Alex M. Vance<br />© 2024
+            Wajiha Batool<br />© 2024
           </h1>
           <div className="flex flex-wrap gap-2 mt-4">
-            <Pill variant="green" href="#">Available for work</Pill>
-            <Pill href="#">Email</Pill>
-            <Pill href="#">LinkedIn</Pill>
+            <Pill variant="green" href="https://www.upwork.com/freelancers/~0114a742487a1b4aea">Available for work</Pill>
+            <Pill href="mailto:wajihabatool2205@gmail.com">Email</Pill>
+            <Pill href="https://github.com/wajihabatool2205">GitHub</Pill>
+            <Pill href="https://www.upwork.com/freelancers/~0114a742487a1b4aea">Upwork</Pill>
           </div>
         </div>
 
         <div>
           <div className="flex flex-wrap gap-2 mb-8">
-            <Pill>Creative Direction</Pill>
-            <Pill>Systems</Pill>
-            <Pill>Strategy</Pill>
-            <Pill>Frontend</Pill>
-            <Pill>R&amp;D</Pill>
+            <Pill>React</Pill>
+            <Pill>Next.js</Pill>
+            <Pill>Tailwind CSS</Pill>
+            <Pill>Figma to Code</Pill>
+            <Pill>Vibe Coding</Pill>
           </div>
           <p className="text-xl font-normal leading-relaxed max-w-[60ch]">
-            Alex M. Vance is a multidisciplinary digital architect and principal designer based in Seattle, WA. Specializing in high-fidelity interface systems, component architecture, and interaction design for fintech and aerospace sectors. Previously Lead Product Designer at Vector Space. Certified Accessibility Specialist by IAAP.
+            Wajiha Batool is a Frontend Developer and Vibe Coder with 3+ years of experience specializing in modern, high-performance web interfaces. Building clean, scalable, and responsive front-end applications using React, Next.js, Tailwind CSS, and pixel-perfect Figma-to-code workflows. Leveraging AI-powered tools like Lovable.dev, Bolt.new, and Cursor for rapid, production-level development.
           </p>
         </div>
       </header>
